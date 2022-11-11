@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Sorting Visualizer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with made to visualize different sorting algorithm.
 
 ## Available Scripts
 
