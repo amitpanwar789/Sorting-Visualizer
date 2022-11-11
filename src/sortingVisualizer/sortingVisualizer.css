@@ -1,0 +1,19 @@
+.arrayBarContainer{
+    display:flex;
+    justify-content: center;
+    
+}
+.arrayContainer{
+    width: 80%;
+}
+
+.arrayBar{
+    display: inline-block;
+    width: 1rem;
+    margin:1px;
+    /* border-bottom-left-radius: 0.9rem; */
+}
+.button{
+    display: block;
+    margin:1rem 1rem;
+}
