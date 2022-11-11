@@ -1,6 +1,6 @@
 # Sorting Visualizer
 
-This project was bootstrapped with made to visualize different sorting algorithm.
+This project was bootstrapped to visualize different sorting algorithm.
 
 ## Available Scripts
 
