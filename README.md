@@ -2,6 +2,11 @@
 
 This project was bootstrapped to visualize different sorting algorithm.
 
+## Run it locally
+1. git clone https://github.com/himanshup/yelpcamp.git
+2. cd yelpcamp
+3. npm install
+
 ## Available Scripts
 
 In the project directory, you can run:
