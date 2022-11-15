@@ -3,7 +3,7 @@
 This project was bootstrapped to visualize different sorting algorithm.
 
 ## Run it locally
-1. git clone https://github.com/himanshup/yelpcamp.git
+1. git clone https://github.com/amitpanwar789/Sorting-Visualizer.git
 2. cd yelpcamp
 3. npm install
 
