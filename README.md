@@ -1,4 +1,5 @@
 # Sorting Visualizer
+https://elaborate-sundae-329a56.netlify.app/
 
 This project was bootstrapped to visualize different sorting algorithm.
 
