@@ -2,6 +2,7 @@ import React from "react";
 import "./sortingVisualizer.css";
 import getMergeSortAnimations from "../sortingAlgo/mergeSort";
 import getBubbleSortAnimations from "../sortingAlgo/bubbleSort"
+import getQuickSortAnimations from "../sortingAlgo/quickSort"
 
 class SortingVisualizer extends React.Component {
   constructor(props) {
@@ -29,7 +30,6 @@ class SortingVisualizer extends React.Component {
         const [firstIdx, secondIdx] = animations[i];
         const color = i % 3 === 0 ? "red" : "pink";
         const firstIdxElement = arrayBars[firstIdx].style;
-        console.log(firstIdx);
         const secondIdxElement = arrayBars[secondIdx].style;
         setTimeout(() => {
           firstIdxElement.backgroundColor = color;
@@ -57,37 +57,65 @@ class SortingVisualizer extends React.Component {
         setTimeout(() => {
           firstIdxElement.backgroundColor = color;
           secondIdxElement.backgroundColor = color;
-        }, i * 2);      
+        }, i * 10);      
       }
       else{
         setTimeout(() => {
           const [idx, heightVal] = animations[i];
           const idxElement = arrayBars[idx].style;
           idxElement.height = `${heightVal}px`;
-        }, i * 2);
+        }, i * 10);
       }
+    }
+  }
+
+  quickSort(){
+    const animations = getQuickSortAnimations(this.state.array);
+    for(let i = 0 ; i < animations.length ; i++){
+      const arrayBars = document.getElementsByClassName("arrayBar");
+      const isColorChange = animations[i].length;
+      if(isColorChange === 3){
+          const [firstIdx,secondIdx,check] = animations[i];
+          const firstIdxElement = arrayBars[firstIdx].style;
+          const secondIdxElement = arrayBars[secondIdx].style;          
+          setTimeout(()=>{
+            firstIdxElement.backgroundColor = (check)? "red" : "pink";
+            secondIdxElement.backgroundColor = (check) ? "green" :"pink";
+          },i*20);               
+      }
+      else{
+        setTimeout(()=>{
+          const [idx, height] = animations[i];
+          const idxElement = arrayBars[idx].style;
+          idxElement.height = `${height}px`;
+        },i*20)
+      }
+
     }
   }
 
   render() {
     const { array } = this.state;
     return (
-      <div className="arrayContainer">
+      <div className="container">
         <div className="button">
           <button onClick={() => this.resetArray()}>
             Generate Random Array
           </button>
           <button onClick={() => this.mergeSort()}>Merge Sort</button>
           <button onClick={() => this.bubbleSort()}>Bubble Sort</button>
+          <button onClick={() => this.quickSort()}>Quick Sort</button>
         </div>
-        <div className="arrayBarContainer">
-          {array.map((val, idx) => (
-            <div
-              style={{ height: `${val}px`, backgroundColor: "pink" }}
-              className="arrayBar"
-              key={idx}
-            ></div>
-          ))}
+        <div className="arrayContainer">
+          <div className="arrayBarContainer">
+            {array.map((val, idx) => (
+              <div
+                style={{ height: `${val}px`, backgroundColor: "pink" }}
+                className="arrayBar"
+                key={idx}
+              ></div>
+            ))}
+          </div>
         </div>
       </div>
     );
