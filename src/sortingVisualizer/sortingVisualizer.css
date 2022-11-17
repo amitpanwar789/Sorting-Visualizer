@@ -1,19 +1,25 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+}
 .arrayBarContainer{
-    display:flex;
-    justify-content: center;
-    
+    width: 80%;  
 }
 .arrayContainer{
-    width: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .arrayBar{
     display: inline-block;
-    width: 1rem;
+    width: 0.61rem;
     margin:1px;
     /* border-bottom-left-radius: 0.9rem; */
 }
 .button{
     display: block;
     margin:1rem 1rem;
+    padding: 1rem 1rem ;    
 }
