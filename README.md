@@ -1,6 +1,12 @@
 # Sorting Visualizer
+https://elaborate-sundae-329a56.netlify.app/
 
-This project was bootstrapped with made to visualize different sorting algorithm.
+This project was bootstrapped to visualize different sorting algorithm.
+
+## Run it locally
+1. git clone https://github.com/amitpanwar789/Sorting-Visualizer.git
+2. cd yelpcamp
+3. npm install
 
 ## Available Scripts
 
