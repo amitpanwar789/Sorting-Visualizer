@@ -125,7 +125,8 @@ class SortingVisualizer extends React.Component {
           <button onClick={() => this.mergeSort()}>Merge Sort</button>
           <button onClick={() => this.bubbleSort()}>Bubble Sort</button>
           <button onClick={() => this.quickSort()}>Quick Sort</button>
-          <div>
+          <button className="speedController">
+          <p>Speed</p>
             <input
               type="range"
               min={5}
@@ -135,7 +136,7 @@ class SortingVisualizer extends React.Component {
               className="slider"
               id="myRange"
             ></input>
-          </div>
+          </button>
         </div>
         <div className="arrayContainer">
           <div className="arrayBarContainer">
