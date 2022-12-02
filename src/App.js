@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import SortingVisualizer from './sortingVisualizer/sortingVisualizer'; 
 import './App.css';
 
